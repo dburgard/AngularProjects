@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+</head>
+
+<body>
+
+
+	<div ng-app="calculate" ng-controller="mainControl as main">
+		Years: <input type="number" ng-model="main.years">
+		<h2 ng-if="main.years >= 0">{{ main.totalDays() }}</h2>
+		<h2 ng-if="main.years < 0">You are smelling like feet, dummy</h2>
+	</div>
+
+
+<!--
+	<div ng-app="calculate" ng-controller="mainControl">
+		Years: <input type="number" ng-model="years">
+		<h2>Days {{ totalDays() }}</h2>
+	</div>
+-->
+
+</body>
+
+</html>
